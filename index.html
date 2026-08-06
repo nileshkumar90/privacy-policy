@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusLoop - Privacy Policy & Terms</title>
+  <style>
+    :root {
+      --bg-color: #FDFBFF;
+      --text-color: #1A1C1E;
+      --text-secondary: #43474E;
+      --primary-color: #0061A4;
+      --primary-container: #D1E4FF;
+      --on-primary-container: #001D36;
+      --surface-color: #FFFFFF;
+      --surface-variant: #E1E2E9;
+      --border-color: #C3C6CF;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 24px 16px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--text-color);
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      background-color: var(--surface-variant);
+      padding: 4px;
+      border-radius: var(--radius-lg);
+      margin-bottom: 28px;
+      gap: 4px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 12px 16px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background-color: var(--primary-container);
+      color: var(--on-primary-container);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .card {
+      background-color: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: var(--primary-color);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 0 12px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border-color);
+      margin-top: 32px;
+    }
+
+    .contact-box {
+      background-color: var(--primary-container);
+      color: var(--on-primary-container);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    .contact-box h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: var(--on-primary-container);
+    }
+
+    .contact-box p {
+      color: var(--on-primary-container);
+      margin-bottom: 0;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>FocusLoop</h1>
+      <p>Legal & Privacy Information</p>
+    </header>
+
+    <!-- Navigation Tabs for Switching Privacy Policy and Terms & Conditions on the SAME page -->
+    <div class="nav-tabs">
+      <button class="tab-btn active" onclick="switchTab('privacy')">Privacy Policy</button>
+      <button class="tab-btn" onclick="switchTab('terms')">Terms & Conditions</button>
+    </div>
+
+    <!-- PRIVACY POLICY SECTION -->
+    <div id="privacy-section" class="tab-content active">
+      
+      <div class="card">
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>FocusLoop</strong>. We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how our application handles your data when you use FocusLoop for timer management, focus sessions, habit tracking, and productivity statistics.</p>
+      </div>
+
+      <div class="card">
+        <h2>2. Information We Collect</h2>
+        <p>FocusLoop operates on an <strong>offline-first local architecture</strong>. We prioritize user privacy and minimize data collection:</p>
+        <ul>
+          <li><strong>Local Habit & Session Data:</strong> Your habit titles, timer presets, completed cycles, and focus duration logs are stored locally on your device using an encrypted local SQLite database (Room DB).</li>
+          <li><strong>Settings & Preferences:</strong> Sound settings, vibration preferences, and timer durations are saved strictly on your local device storage.</li>
+          <li><strong>No Personal Tracking:</strong> We do NOT track your location, read your contacts, access your media files, or harvest personal identifiable information.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>3. How We Use Your Data</h2>
+        <p>All data generated within FocusLoop is used exclusively for:</p>
+        <ul>
+          <li>Calculating your daily, weekly, and all-time focus statistics.</li>
+          <li>Managing active Pomodoro focus countdowns and ambient notification sounds.</li>
+          <li>Displaying habit streaks and progress visualizations.</li>
+          <li>Allowing you to export your data in CSV or JSON format anytime.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. Data Storage & User Rights</h2>
+        <p>You have full ownership and control over all data created in FocusLoop:</p>
+        <ul>
+          <li><strong>100% On-Device Storage:</strong> Your data remains solely on your smartphone or tablet.</li>
+          <li><strong>Data Export:</strong> You can back up or export your data at any time from the App Settings menu in standard CSV or JSON files.</li>
+          <li><strong>Data Erasure:</strong> You can completely clear all data from the device at any time using the "Reset All Data" option in Settings or by clearing the app cache.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>5. Third-Party Services & Permissions</h2>
+        <p>FocusLoop requests minimal system permissions:</p>
+        <ul>
+          <li><strong>Notifications & Alarms:</strong> Required to notify you when focus cycles or breaks complete, even when the app is running in the background.</li>
+        </ul>
+      </div>
+
+      <div class="contact-box">
+        <h3>Contact Us</h3>
+        <p>If you have any questions or concerns regarding this Privacy Policy, please email us at:</p>
+        <p style="margin-top: 8px;"><strong>Email:</strong> <a href="mailto:nilesh9031322422@gmail.com" style="color: var(--on-primary-container); text-decoration: underline;">nilesh9031322422@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <!-- TERMS & CONDITIONS SECTION -->
+    <div id="terms-section" class="tab-content">
+
+      <div class="card">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By downloading, installing, or using <strong>FocusLoop</strong>, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, please do not use the application.</p>
+      </div>
+
+      <div class="card">
+        <h2>2. License & App Usage</h2>
+        <p>FocusLoop grants you a personal, non-transferable, non-exclusive, revocable license to use the app for personal productivity and habit management on your device in accordance with these terms.</p>
+        <ul>
+          <li>You agree not to modify, reverse engineer, or decompile the app.</li>
+          <li>You agree not to use the app for unlawful or prohibited activities.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>3. User Data & Responsibility</h2>
+        <p>Since FocusLoop stores data locally on your device, you are responsible for maintaining backups of your data using the built-in CSV/JSON export tools. We are not liable for data loss caused by device damage, factory resets, or app uninstallation.</p>
+      </div>
+
+      <div class="card">
+        <h2>4. Intellectual Property</h2>
+        <p>All brand assets, geometric UI design elements, original code, logos, and features of FocusLoop are owned by the developer and protected by intellectual property laws.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Disclaimer & Limitation of Liability</h2>
+        <p>FocusLoop is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. In no event shall the developer be liable for any indirect, incidental, or consequential damages resulting from your use of the app.</p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Contact & Support</h3>
+        <p>For questions regarding these Terms & Conditions, please contact us at:</p>
+        <p style="margin-top: 8px;"><strong>Email:</strong> <a href="mailto:nilesh9031322422@gmail.com" style="color: var(--on-primary-container); text-decoration: underline;">nilesh9031322422@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2026 FocusLoop. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+      if (tab === 'privacy') {
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+        document.getElementById('privacy-section').classList.add('active');
+      } else {
+        document.querySelectorAll('.tab-btn')[1].classList.add('active');
+        document.getElementById('terms-section').classList.add('active');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
